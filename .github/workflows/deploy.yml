@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: 18
       - name: Build
-        run: cd demo && npm i && npm run build && touch build/.nojekyll
+        run: cd packages/component-titles-demo && npm i && npm run build && touch build/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/master' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./demo/build

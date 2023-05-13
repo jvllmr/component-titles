@@ -1,40 +1,14 @@
 {
-  "name": "react-use-dom-title-hook",
-  "version": "1.1.1",
-  "description": "A react hook for handling DOM titles in nested components.",
-  "repository": "https://github.com/jvllmr/react-use-dom-title-hook",
-  "main": "lib/use-dom-title.js",
-  "author": "Jan Vollmer <zunder325@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "react": ">=16.8",
-    "uuid": "^8.3.2 || ^9.0.0"
-  },
-  "peerDependencies": {
-    "react-dom": ">=16.8"
-  },
-  "devDependencies": {
-    "@testing-library/react": "^13.0 || ^14.0.0",
-    "@types/jest": "^27.4.1 || ^29.0.0",
-    "@types/uuid": "^8.3.4 || ^9.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
-    "eslint": "^8.10.0",
-    "eslint-plugin-react": "^7.29.3",
-    "jest": "^27.5.1 || ^29.0.0",
-    "jest-environment-jsdom": "^29.0.3",
-    "react-dom": ">=16.8",
-    "ts-jest": "^27.1.3 || ^29.0.0",
-    "typescript": "^4.6.2 || ^5.0.0"
-  },
-  "files": [
-    "lib/**/*"
-  ],
-  "scripts": {
-    "prepublish": "tsc",
-    "test": "jest",
-    "coverage": "jest --coverage"
-  },
-  "homepage": "https://jvllmr.github.io/react-use-dom-title-hook"
+	"name": "@jvllmr/component-titles",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.13.0",
+		"@typescript-eslint/parser": "^5.13.0",
+		"eslint": "^8.10.0",
+		"eslint-plugin-react": "^7.29.3",
+		"typescript": "^5.0.4"
+	}
 }

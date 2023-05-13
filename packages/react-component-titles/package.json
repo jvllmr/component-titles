@@ -1,0 +1,24 @@
+{
+	"name": "@jvllmr/react-component-titles",
+	"version": "1.0.0",
+	"description": "Component-bound titles for React",
+	"repository": {
+		"url": "https://github.com/jvllmr/component-titles",
+		"type": "git",
+		"directory": "packages/react-component-titles"
+	},
+	"author": "Jan Vollmer <jan@vllmr.dev>",
+	"license": "MIT",
+	"sideEffects": false,
+	"dependencies": {
+		"@jvllmr/component-titles-core": "1.0.0",
+		"react": ">=16.0.0",
+		"react-dom": ">=16.0.0",
+		"uuid": "^8.3.2 || ^9.0.0"
+	},
+	"devDependencies": {
+		"@jvllmr/component-titles-test": "1.0.0",
+		"@testing-library/react": "^14.0.0",
+		"@types/uuid": "^8.3.4 || ^9.0.0"
+	}
+}

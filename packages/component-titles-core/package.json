@@ -1,0 +1,19 @@
+{
+	"name": "@jvllmr/component-titles-core",
+	"version": "1.0.0",
+	"description": "Component-bound titles core",
+	"repository": "https://github.com/jvllmr/component-titles",
+	"main": "lib/use-dom-title.js",
+	"author": "Jan Vollmer <jan@vllmr.dev>",
+	"license": "MIT",
+	"private": false,
+	"files": [
+		"lib/**/*"
+	],
+	"scripts": {
+		"prepublish": "tsc",
+		"test": "jest",
+		"coverage": "jest --coverage"
+	},
+	"homepage": "https://jvllmr.github.io/react-use-dom-title-hook"
+}
