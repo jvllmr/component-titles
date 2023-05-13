@@ -22,8 +22,8 @@
       "type": "node-terminal",
       "name": "Demo Site",
       "request": "launch",
-      "cwd": "${workspaceFolder}/demo",
-      "command": "npm run dev"
+      "cwd": "${workspaceFolder}/packages/component-titles-demo",
+      "command": "yarn run dev"
     }
   ]
 }

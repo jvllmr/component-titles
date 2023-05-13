@@ -5,7 +5,7 @@ import {
 import { renderHook } from "@testing-library/react";
 import { useComponentTitle } from "./useComponentTitle";
 
-const createTitle: TCreateTitleFunction = (title) => {
+const createTitle: TCreateTitleFunction = (title: string) => {
   return renderHook((newTitle: string) => useComponentTitle(newTitle), {
     initialProps: title,
   });

@@ -4,7 +4,7 @@
 ![Codecov](https://img.shields.io/codecov/c/github/jvllmr/component-titles?style=plastic)
 ![npm](https://img.shields.io/npm/dm/react-use-dom-title-hook?style=plastic)
 
-A hook for handling browser Document titles in nested components.
+A hook for handling browser Document titles in components. Previous titles get remembered and restored when the component unmounts.
 
 ## Functionality
 

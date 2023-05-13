@@ -5,7 +5,10 @@
     "packages/*"
   ],
   "scripts": {
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "demo": "vite --force",
+    "prepublish": "tsc --project tsconfig.build.json",
+    "test": "jest"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.13.0",

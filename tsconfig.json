@@ -1,23 +1,23 @@
 {
-	"compilerOptions": {
-		"target": "es5",
+  "compilerOptions": {
+    "target": "es5",
 
-		"module": "CommonJS",
-		"lib": ["DOM", "DOM.Iterable"],
-		"removeComments": true,
-		"declaration": true,
-		"moduleResolution": "node",
-		"outDir": "./lib",
+    "module": "NodeNext",
+    "lib": ["DOM", "DOM.Iterable"],
+    "removeComments": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "outDir": "lib",
+    "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": true,
+    "strict": true,
+    "jsx": "react-jsx",
 
-		"forceConsistentCasingInFileNames": true,
-		"downlevelIteration": true,
-		"strict": true,
-		"jsx": "react-jsx",
-		"paths": {
-			"@jvllmr/*": ["./packages/*/src"]
-		}
-	},
-	"include": ["packages/**/src"],
-	"exclude": ["src/**/*.test.ts", "node_modules"],
-	"compileOnSave": true
+    "paths": {
+      "@jvllmr/*": ["./packages/*/src"]
+    }
+  },
+  "include": ["packages/**/src"],
+  "exclude": ["node_modules"],
+  "compileOnSave": true
 }

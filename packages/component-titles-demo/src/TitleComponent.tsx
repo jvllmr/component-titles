@@ -1,15 +1,15 @@
+import { useComponentTitle } from "@jvllmr/react-component-titles";
 import { Button, Center, Paper, SimpleGrid, Text, Title } from "@mantine/core";
 import { Prism } from "@mantine/prism";
+import { IconCircleCheck, IconCircleX } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
-import useDOMTitle from "react-use-dom-title-hook";
-import { CircleCheck, CircleX } from "tabler-icons-react";
 export default function TitleComponent(props: {
   title: string;
   active?: boolean;
 }) {
-  useDOMTitle(props.active ? props.title : "");
-  const notActiveIcon = <CircleX color="red" size={50} />;
-  const activeIcon = <CircleCheck color="green" size={50} />;
+  useComponentTitle(props.active ? props.title : "");
+  const notActiveIcon = <IconCircleX color="red" size={50} />;
+  const activeIcon = <IconCircleCheck color="green" size={50} />;
   const [icon, setIcon] = useState<React.ReactNode>(
     props.active ? activeIcon : notActiveIcon
   );

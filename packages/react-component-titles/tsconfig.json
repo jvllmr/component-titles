@@ -1,19 +1,17 @@
 {
-	"extends": "../../tsconfig.json",
-	"include": ["./src"],
-	"compilerOptions": {
-		"composite": true,
-		"outDir": "lib",
-		"paths": {
-			"@jvllmr/component-titles-core": ["../component-titles-core/src"],
-			"@jvllmr/component-titles-test": ["../component-titles-test/src"]
-		},
-		"rootDir": "src",
-		"baseUrl": "."
-	},
+  "extends": "../../tsconfig.json",
+  "include": ["./src"],
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "lib",
+    "paths": {
+      "@jvllmr/component-titles-core": ["../component-titles-core/src"],
+      "@jvllmr/component-titles-test": ["../component-titles-test/src"]
+    }
+  },
 
-	"references": [
-		{ "path": "../component-titles-core" },
-		{ "path": "../component-titles-test" }
-	]
+  "references": [
+    { "path": "../component-titles-core" },
+    { "path": "../component-titles-test" }
+  ]
 }
