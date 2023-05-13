@@ -1,7 +1,7 @@
-import { useComponentTitle } from "./use-dom-title";
+import { useComponentTitle } from "./useComponentTitle";
 
 export function DocumentTitle({ title }: { title: string }) {
-	useComponentTitle(title);
+  useComponentTitle(title);
 
-	return null;
+  return null;
 }
