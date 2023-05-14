@@ -14,7 +14,7 @@ import { TitleComponentExample } from "./TitleComponent";
 import "./index.css";
 
 export default function DemoApp() {
-  useComponentTitle("Demo for react-use-dom-title-hook");
+  useComponentTitle("Component-titles Demo");
 
   return (
     <Paper
