@@ -50,7 +50,7 @@ export function TitleButtonComponent(props: { title: string }) {
 
 export function TitleComponentExample() {
   const demoCode = `
-import useDOMTitle from "react-use-dom-title-hook";
+import {useComponentTitle} from "@jvllmr/react-component-titles"
 import { CircleCheck, CircleX } from "tabler-icons-react";
 import { Center, SimpleGrid, Text } from "@mantine/core";
 

@@ -2,8 +2,6 @@
   "name": "@jvllmr/react-component-titles",
   "version": "1.0.0",
   "description": "Component-bound titles for React",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
   "type": "module",
   "repository": {
     "url": "https://github.com/jvllmr/component-titles",
