@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useComponentTitle } from "@jvllmr/react-component-titles";
 import { Paper, TextInput, Title } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";

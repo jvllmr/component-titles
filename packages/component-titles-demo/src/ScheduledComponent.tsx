@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { Button, Center, Paper, SimpleGrid, Title } from "@mantine/core";
 import { useCallback, useState } from "react";
 import TitleComponent from "./TitleComponent";
