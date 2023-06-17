@@ -2,7 +2,7 @@
 
 ![Routine Checks](https://github.com/jvllmr/component-titles/actions/workflows/test.yml/badge.svg)
 ![Codecov](https://img.shields.io/codecov/c/github/jvllmr/component-titles?style=plastic)
-![npm](https://img.shields.io/npm/dm/react-use-dom-title-hook?style=plastic)
+![npm](https://img.shields.io/npm/dm/@jvllmr/component-titles-core?style=plastic)
 
 A hook for handling browser Document titles in components. Previous titles get remembered and restored when the component unmounts.
 

@@ -1,5 +1,5 @@
 import {
-  createTests,
+  createHookTests,
   TCreateTitleFunction,
 } from "@jvllmr/component-titles-test";
 import { renderHook } from "@testing-library/react";
@@ -11,4 +11,4 @@ const createTitle: TCreateTitleFunction = (title: string) => {
   });
 };
 
-createTests(createTitle);
+createHookTests(createTitle);

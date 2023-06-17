@@ -1,14 +1,14 @@
 {
-	"extends": "../../tsconfig.json",
-	"include": ["./src"],
-	"compilerOptions": {
-		"paths": {
-			"@jvllmr/component-titles-core": ["../component-titles-core"],
-			"@jvllmr/component-titles-test": ["../component-titles-test"]
-		}
-	},
-	"references": [
-		{ "path": "../component-titles-core" },
-		{ "path": "../component-titles-test" }
-	]
+  "extends": "../../tsconfig.json",
+  "include": ["./src"],
+  "compilerOptions": {
+    "paths": {
+      "@jvllmr/component-titles-core": ["../component-titles-core/src"],
+      "@jvllmr/component-titles-test": ["../component-titles-test/src"]
+    }
+  },
+  "references": [
+    { "path": "../component-titles-core" },
+    { "path": "../component-titles-test" }
+  ]
 }

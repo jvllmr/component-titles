@@ -1,14 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/demo/"
+    directory: "/"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 4
-    versioning-strategy: "lockfile-only"
-  - package-ecosystem: "npm"
-    directory: "."
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 4
+    open-pull-requests-limit: 6
     versioning-strategy: "lockfile-only"
