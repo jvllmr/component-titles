@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@jvllmr/component-titles-test": "1.0.0",
-    "@solidjs/testing-library": "^0.7.0",
+    "@solidjs/testing-library": "^0.7.0 || ^0.8.0",
     "solid-js": "^1.7.5"
   }
 }
