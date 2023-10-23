@@ -16,7 +16,7 @@ function refSetter<TData>(data: TData, key: keyof TData) {
 
 function refGetter<TData, TDataKey extends keyof TData>(
   data: TData,
-  key: TDataKey
+  key: TDataKey,
 ): () => TData[TDataKey] {
   return () => data[key];
 }
@@ -46,7 +46,7 @@ export function useComponentTitle(title: string) {
       titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
       setBehindMe: refSetter(componentInfo, "behindMe"),
       setIAmLast: refSetter(componentInfo, "iAmLast"),
-    })
+    }),
   );
   const handleUnregister = createMemo(
     () =>
@@ -61,7 +61,7 @@ export function useComponentTitle(title: string) {
         setIAmLast: refSetter(componentInfo, "iAmLast"),
         setTitleBeforeMount: refSetter(componentInfo, "titleBeforeMount"),
       }),
-    []
+    [],
   );
   const revertTitle = createMemo(
     () =>
@@ -71,7 +71,7 @@ export function useComponentTitle(title: string) {
         mountedTitle: refGetter(componentInfo, "mountedTitle"),
         titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
       }),
-    []
+    [],
   );
   const register = createMemo(() =>
     registerFactory({
@@ -86,7 +86,7 @@ export function useComponentTitle(title: string) {
       setIAmLast: refSetter(componentInfo, "iAmLast"),
       setMountedTitle: refSetter(componentInfo, "mountedTitle"),
       setTitleBeforeMount: refSetter(componentInfo, "titleBeforeMount"),
-    })
+    }),
   );
 
   onMount(() => {
