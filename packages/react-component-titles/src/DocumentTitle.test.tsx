@@ -20,13 +20,13 @@ describe("DocumentTitle", () => {
         <div>
           <DocumentTitle title="Toasty Buns" />
         </div>
-      </div>
+      </div>,
     );
     expect(document.title).toBe("Toasty Buns");
     renderResult.rerender(
       <div>
         <DocumentTitle title="Mounted" />
-      </div>
+      </div>,
     );
     expect(document.title).toBe("Mounted");
     renderResult.unmount();

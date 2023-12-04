@@ -21,14 +21,14 @@ type TDOMTitleUnregisterEventDetail =
 
 function checkIfSameUUID<T extends IDOMTitleComponentData>(
   a?: T,
-  b?: T
+  b?: T,
 ): boolean {
   return !!a && !!b && a.uuid === b.uuid;
 }
 
 const isMe = (
   me: { uuid: string; mountedTitle: string; titleBeforeMount: string },
-  other?: IDOMTitleComponentData
+  other?: IDOMTitleComponentData,
 ) =>
   me.mountedTitle &&
   me.uuid &&
@@ -38,7 +38,7 @@ const isMe = (
       uuid: me.uuid,
       titleBeforeMount: me.titleBeforeMount,
     },
-    other
+    other,
   );
 
 const createUnregisterEvent = ({
@@ -68,7 +68,7 @@ const unregisterDOMTitle = "__unregisterDOMTitle";
 
 type TDOMTitleRegisterEventHandler = (e: TDOMTitleRegisterEventDetail) => void;
 type TDOMTitleUnregisterEventHandler = (
-  e: TDOMTitleUnregisterEventDetail
+  e: TDOMTitleUnregisterEventDetail,
 ) => void;
 
 export const handleRegisterFactory =
@@ -204,7 +204,7 @@ export function onUnmount({
   };
   document.dispatchEvent(createUnregisterEvent(unregisterEventProps));
   uuidStore = uuidStore.filter(
-    (val: string) => val !== nextUnregisterEventProps.myId()
+    (val: string) => val !== nextUnregisterEventProps.myId(),
   );
 }
 
@@ -248,7 +248,7 @@ export const registerFactory =
             mountedTitle: mountedTitle(),
             myId: myId(),
             titleBeforeMount: titleBeforeMount(),
-          })
+          }),
         );
         revertTitle();
 
@@ -278,7 +278,7 @@ export const registerFactory =
                 title: mountedTitle(),
                 setMyRef: setBeforeMe,
               },
-            }
+            },
           );
           document.dispatchEvent(registerEvent);
         }
