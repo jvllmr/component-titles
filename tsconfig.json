@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
 
-    "module": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+
     "lib": ["DOM", "DOM.Iterable"],
     "removeComments": true,
     "declaration": true,
-    "moduleResolution": "node",
+
     "outDir": "lib",
     "forceConsistentCasingInFileNames": true,
     "downlevelIteration": true,
