@@ -11,7 +11,7 @@ export default function TitleComponent(props: {
   const notActiveIcon = <IconCircleX color="red" size={50} />;
   const activeIcon = <IconCircleCheck color="green" size={50} />;
   const [icon, setIcon] = useState<React.ReactNode>(
-    props.active ? activeIcon : notActiveIcon
+    props.active ? activeIcon : notActiveIcon,
   );
 
   useEffect(() => {
