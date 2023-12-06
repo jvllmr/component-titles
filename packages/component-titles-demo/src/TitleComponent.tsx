@@ -1,6 +1,6 @@
 import { useComponentTitle } from "@jvllmr/react-component-titles";
 import { Button, Center, Paper, SimpleGrid, Text, Title } from "@mantine/core";
-import { Prism } from "@mantine/prism";
+import { CodeHighlight } from "@mantine/code-highlight";
 import { IconCircleCheck, IconCircleX } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
 export default function TitleComponent(props: {
@@ -103,12 +103,12 @@ function TitleButtonComponent(props: { title: string }) {
           The next examples will be shown with the following component:
         </Text>
         <TitleComponent title="My title" />
-        <Prism language="tsx">{demoCode}</Prism>
+        <CodeHighlight language="tsx" code={demoCode} />
         <Text style={{ marginTop: 30 }}>
           Obviously, the component only changes the title with external input:
         </Text>
         <TitleButtonComponent title="My title" />
-        <Prism language="tsx">{demoCodeButton}</Prism>
+        <CodeHighlight language="tsx" code={demoCodeButton} />
       </Paper>
     </div>
   );

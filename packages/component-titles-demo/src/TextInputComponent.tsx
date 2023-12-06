@@ -1,8 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useComponentTitle } from "@jvllmr/react-component-titles";
+import { CodeHighlight } from "@mantine/code-highlight";
 import { Paper, TextInput, Title } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
-import { Prism } from "@mantine/prism";
+
 import { useState } from "react";
 export default function TextInputComponent() {
   const [value, setValue] = useState("");
@@ -34,7 +35,7 @@ function TextInputComponent() {
   return (
     <div style={{ marginTop: 50 }}>
       <Paper withBorder p="xs">
-        <Title color="light">Type a value</Title>
+        <Title c="light">Type a value</Title>
         <TextInput
           style={{ marginTop: 10 }}
           value={value}
@@ -43,13 +44,12 @@ function TextInputComponent() {
           }}
           description="The document title will update 3 seconds after no input change"
         />
-        <Prism
-          style={{ marginTop: 10 }}
+        <CodeHighlight
+          style={{ overflow: "hidden" }}
           language="tsx"
-          sx={{ overflow: "hidden" }}
-        >
-          {demoCode}
-        </Prism>
+          mt={10}
+          code={demoCode}
+        />
       </Paper>
     </div>
   );

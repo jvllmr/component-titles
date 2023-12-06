@@ -1,20 +1,22 @@
 import { MantineProvider, MantineProviderProps } from "@mantine/core";
-import { useColorScheme } from "@mantine/hooks";
+import "@mantine/core/styles.css";
+import "@mantine/code-highlight/styles.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import DemoApp from "./App";
+import { useColorScheme } from "@mantine/hooks";
 
 function Index() {
-  const colorScheme = useColorScheme();
   const mantineProviderProps: MantineProviderProps = {
     children: <DemoApp />,
     theme: {
-      colorScheme: colorScheme,
-
       black: "#1a1b1e",
     },
   };
-  return <MantineProvider {...mantineProviderProps} />;
+  const colorScheme = useColorScheme();
+  return (
+    <MantineProvider forceColorScheme={colorScheme} {...mantineProviderProps} />
+  );
 }
 
 ReactDOM.render(
