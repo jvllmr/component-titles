@@ -12,11 +12,11 @@ export default defineConfig({
     alias: {
       "@jvllmr/react-component-titles": path.join(
         __dirname,
-        "../react-component-titles/src"
+        "../react-component-titles/src",
       ),
       "@jvllmr/component-titles-core": path.join(
         __dirname,
-        "../component-titles-core/src"
+        "../component-titles-core/src",
       ),
     },
   },

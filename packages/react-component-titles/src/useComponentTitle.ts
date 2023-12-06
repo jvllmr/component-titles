@@ -36,7 +36,7 @@ export function useComponentTitle(title: string) {
         setBehindMe: refSetter(behindMe),
         setIAmLast: refSetter(iAmLast),
       }),
-    []
+    [],
   );
   const handleUnregister = useMemo(
     () =>
@@ -51,7 +51,7 @@ export function useComponentTitle(title: string) {
         setIAmLast: refSetter(iAmLast),
         setTitleBeforeMount: refSetter(titleBeforeMount),
       }),
-    []
+    [],
   );
   const revertTitle = useMemo(
     () =>
@@ -61,7 +61,7 @@ export function useComponentTitle(title: string) {
         mountedTitle: refGetter(mountedTitle),
         titleBeforeMount: refGetter(titleBeforeMount),
       }),
-    []
+    [],
   );
   const register = useMemo(
     () =>
@@ -78,7 +78,7 @@ export function useComponentTitle(title: string) {
         setMountedTitle: refSetter(mountedTitle),
         setTitleBeforeMount: refSetter(titleBeforeMount),
       }),
-    []
+    [],
   );
   useEffect(() => {
     onMount({ handleRegister, handleUnregister });

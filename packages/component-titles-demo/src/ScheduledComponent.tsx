@@ -35,7 +35,7 @@ export default function ScheduledComponent(props: {
         }, 2000);
       }
     },
-    [props.schedule]
+    [props.schedule],
   );
 
   return (
