@@ -13,12 +13,13 @@
     "forceConsistentCasingInFileNames": true,
     "downlevelIteration": true,
     "strict": true,
-    "jsx": "react-jsx",
+
     "esModuleInterop": true,
 
     "paths": {
       "@jvllmr/*": ["./packages/*/src"]
-    }
+    },
+    "jsx": "preserve"
   },
   "include": ["packages/**/src"],
   "exclude": ["node_modules"],

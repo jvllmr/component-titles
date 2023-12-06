@@ -7,7 +7,15 @@ import {
   registerFactory,
   revertTitleFactory,
 } from "@jvllmr/component-titles-core";
-import { createEffect, createMemo, on, onCleanup, onMount } from "solid-js";
+import {
+  Accessor,
+  createEffect,
+  createMemo,
+  createSignal,
+  on,
+  onCleanup,
+  onMount,
+} from "solid-js";
 import { v4 as uuidv4 } from "uuid";
 
 function refSetter<TData>(data: TData, key: keyof TData) {
@@ -21,7 +29,7 @@ function refGetter<TData, TDataKey extends keyof TData>(
   return () => data[key];
 }
 
-export function useComponentTitle(title: string) {
+export function useComponentTitle(title: Accessor<string>) {
   const componentInfo: {
     iAmLast: boolean;
     mountedTitle: string;

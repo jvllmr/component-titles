@@ -7,7 +7,8 @@
     "paths": {
       "@jvllmr/component-titles-core": ["../component-titles-core/src"],
       "@jvllmr/component-titles-test": ["../component-titles-test/src"]
-    }
+    },
+    "jsx": "react-jsx"
   },
 
   "references": [

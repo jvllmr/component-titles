@@ -8,15 +8,12 @@ import { useComponentTitle } from "./useComponentTitle";
 const createTitle: TCreateTitleFunction = (title: string) => {
   const [titleSignal, setTitle] = createSignal(title);
   const { cleanup } = renderHook(useComponentTitle, {
-    initialProps: [titleSignal()],
+    initialProps: [titleSignal],
   });
 
   return {
     unmount: cleanup,
-    rerender: (title) =>
-      queueMicrotask(() => {
-        setTitle(title);
-      }),
+    rerender: (title) => setTitle(title),
   };
 };
 
