@@ -19,8 +19,8 @@ The hook adheres to the following rules:
 
 ## Installation
 
--`npm i @jvllmr/react-component-titles` or `yarn add @jvllmr/react-component-titles` for React
--`npm i @jvllmr/solid-component-titles` or `yarn add @jvllmr/solid-component-titles` for Solid
+- `npm i @jvllmr/react-component-titles` or `yarn add @jvllmr/react-component-titles` for React
+- `npm i @jvllmr/solid-component-titles` or `yarn add @jvllmr/solid-component-titles` for Solid
 
 ## Demo
 
@@ -45,11 +45,11 @@ function MyLoadingComponent() {
 ### useComponentTitle
 useComponentTitle hook API
 ```typescript
-useComponentTitle(title: string): void
+function useComponentTitle(title: string): void
 ```
 
 ### DocumentTitle
 DocumentTitle component API
 ```typescript
-DocumentTitle(props: {title: string}): null
+function DocumentTitle(props: {title: string}): null
 ```
