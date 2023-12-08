@@ -6,15 +6,45 @@
   "repository": "https://github.com/jvllmr/component-titles",
   "author": "Jan Vollmer <jan@vllmr.dev>",
   "license": "MIT",
+  "scripts": {
+    "test": "vitest run --coverage",
+    "build": "tsup",
+    "test:build": "publint --strict"
+  },
+  "main": "./build/index.cjs",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    "development": {
+      "import": {
+        "types": "./build/index.d.ts",
+        "default": "./build/dev.js"
+      },
+      "require": {
+        "types": "./build/index.d.cts",
+        "default": "./build/dev.cjs"
+      }
+    },
+    "import": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    },
+    "require": {
+      "types": "./build/index.d.cts",
+      "default": "./build/index.cjs"
+    }
+  },
   "dependencies": {
-    "@jvllmr/component-titles-core": "1.0.0"
+    "@jvllmr/component-titles-core": "workspace:*"
   },
   "peerDependencies": {
     "solid-js": "^1.7.5"
   },
   "devDependencies": {
-    "@jvllmr/component-titles-test": "1.0.0",
+    "@jvllmr/component-titles-test": "workspace:*",
     "@solidjs/testing-library": "^0.8.0",
-    "solid-js": "^1.7.5"
+    "solid-js": "^1.7.5",
+    "vite-plugin-solid": "^2.8.0",
+    "tsup-preset-solid": "^2.1.0"
   }
 }

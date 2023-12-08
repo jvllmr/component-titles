@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+
+  "affected": {
+    "defaultBase": "main"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx-cloud",
+      "options": {
+        "cacheableOperations": ["test", "build"],
+        "parallel": 5,
+        "accessToken": "YWRhNTI4ZDMtM2M5Zi00NmYyLWJlODItYjRmMDAwZDE0ZmE5fHJlYWQ="
+      }
+    }
+  },
+  "defaultBase": "main",
+  "nxCloudAccessToken": "YWRhNTI4ZDMtM2M5Zi00NmYyLWJlODItYjRmMDAwZDE0ZmE5fHJlYWQ=",
+  "namedInputs": {
+    "sharedGlobals": [
+      "{workspaceRoot}/package.json",
+      "{workspaceRoot}/tsconfig.json"
+    ],
+    "default": [
+      "sharedGlobals",
+      "{projectRoot}/**/*",
+      "!{projectRoot}/**/*.md"
+    ],
+    "public": ["default", "{projectRoot}/build", "{projectRoot}/dist"]
+  },
+  "targetDefaults": {
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^public"],
+      "outputs": ["{projectRoot}/coverage"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^public"],
+      "outputs": ["{projectRoot}/build", "{projectRoot}/dist"]
+    },
+    "test:build": {
+      "dependsOn": ["build"],
+      "inputs": ["default", "^public"]
+    }
+  }
+}

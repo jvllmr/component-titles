@@ -1,18 +1,14 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["./src"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "test-setup.ts",
+    "tsup.config.js",
+    "vitest.config.ts"
+  ],
   "compilerOptions": {
-    "composite": true,
-    "outDir": "lib",
-    "paths": {
-      "@jvllmr/component-titles-core": ["../component-titles-core/src"],
-      "@jvllmr/component-titles-test": ["../component-titles-test/src"]
-    },
-    "jsx": "react-jsx"
-  },
-
-  "references": [
-    { "path": "../component-titles-core" },
-    { "path": "../component-titles-test" }
-  ]
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }

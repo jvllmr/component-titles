@@ -7,8 +7,7 @@ import {
   registerFactory,
   revertTitleFactory,
 } from "@jvllmr/component-titles-core";
-import { MutableRefObject, useEffect, useMemo, useRef } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { MutableRefObject, useEffect, useMemo, useRef, useId } from "react";
 
 function refSetter<T>(ref: MutableRefObject<T>) {
   return (value: T) => (ref.current = value);
@@ -19,7 +18,7 @@ function refGetter<T>(ref: MutableRefObject<T>) {
 }
 
 export function useComponentTitle(title: string) {
-  const uuid = useRef(uuidv4());
+  const id = useId();
   const mountedTitle = useRef("");
   const titleBeforeMount = useRef("");
   const behindMe = useRef<IDOMTitleComponentData>();
@@ -31,7 +30,7 @@ export function useComponentTitle(title: string) {
       handleRegisterFactory({
         iAmLast: refGetter(iAmLast),
         mountedTitle: refGetter(mountedTitle),
-        myId: refGetter(uuid),
+        myId: () => id,
         titleBeforeMount: refGetter(titleBeforeMount),
         setBehindMe: refSetter(behindMe),
         setIAmLast: refSetter(iAmLast),
@@ -44,7 +43,7 @@ export function useComponentTitle(title: string) {
         beforeMe: refGetter(beforeMe),
         behindMe: refGetter(behindMe),
         mountedTitle: refGetter(mountedTitle),
-        myId: refGetter(uuid),
+        myId: () => id,
         titleBeforeMount: refGetter(titleBeforeMount),
         setBeforeMe: refSetter(beforeMe),
         setBehindMe: refSetter(behindMe),
@@ -70,7 +69,7 @@ export function useComponentTitle(title: string) {
         beforeMe: refGetter(beforeMe),
         behindMe: refGetter(behindMe),
         mountedTitle: refGetter(mountedTitle),
-        myId: refGetter(uuid),
+        myId: () => id,
         titleBeforeMount: refGetter(titleBeforeMount),
         setBeforeMe: refSetter(beforeMe),
         setBehindMe: refSetter(behindMe),
@@ -89,7 +88,7 @@ export function useComponentTitle(title: string) {
         handleRegister,
         handleUnregister,
         mountedTitle: refGetter(mountedTitle),
-        myId: refGetter(uuid),
+        myId: () => id,
         revertTitle,
         titleBeforeMount: refGetter(titleBeforeMount),
       });

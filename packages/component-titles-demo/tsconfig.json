@@ -1,16 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
 
-    "esModuleInterop": true,
-    "paths": {
-      "@jvllmr/react-component-titles": ["../react-component-titles/src"]
-    }
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
-  "include": ["src"],
-
-  "references": [{ "path": "../react-component-titles" }]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"]
 }

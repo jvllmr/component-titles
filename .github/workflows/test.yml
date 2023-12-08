@@ -8,6 +8,8 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
+env:
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 jobs:
   Test:
     runs-on: ${{ matrix.os }}
@@ -15,28 +17,13 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: ["14", "16", "18"]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: ${{ matrix.node }}
+          version: 8
       - run: |
-          npm i -g yarn
-          yarn install
-          yarn jest
-
-  Coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-      - run: |
-          npm i -g yarn
-          yarn install
-          yarn run coverage
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov
+          pnpm install
+          pnpm run test:all
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3

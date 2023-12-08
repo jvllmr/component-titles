@@ -13,15 +13,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 18
+          version: 8
       - name: Build
-        run: cd packages/component-titles-demo && npm i && npm run build && touch build/.nojekyll
+        run: cd packages/component-titles-demo && pnpm install && pnpm run build && touch build/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./demo/build
+          publish_dir: ./packages/component-titles-demo/build

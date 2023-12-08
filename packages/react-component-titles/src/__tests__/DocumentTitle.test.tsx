@@ -1,12 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { render } from "@solidjs/testing-library";
-import { DocumentTitle } from "./DocumentTitle";
-import { createSignal } from "solid-js";
 
+import { render } from "@testing-library/react";
+import { DocumentTitle } from "../DocumentTitle";
+import { describe, it, expect } from "vitest";
 describe("DocumentTitle", () => {
   it("sets title when it mounts and resets when it unmounts", () => {
     document.title = "Unmounted";
-    const renderResult = render(() => <DocumentTitle title="Toasty Buns" />);
+    const renderResult = render(<DocumentTitle title="Toasty Buns" />);
     expect(document.title).toBe("Toasty Buns");
     renderResult.unmount();
     expect(document.title).toBe("Unmounted");
@@ -14,15 +14,20 @@ describe("DocumentTitle", () => {
 
   it("prioritizes titles deeper in the tree", () => {
     document.title = "Unmounted";
-    const [mounted, setMounted] = createSignal(true);
-    const renderResult = render(() => (
+    const renderResult = render(
       <div>
         <DocumentTitle title="Mounted" />
-        <div>{mounted() ? <DocumentTitle title="Toasty Buns" /> : null}</div>
-      </div>
-    ));
+        <div>
+          <DocumentTitle title="Toasty Buns" />
+        </div>
+      </div>,
+    );
     expect(document.title).toBe("Toasty Buns");
-    setMounted(false);
+    renderResult.rerender(
+      <div>
+        <DocumentTitle title="Mounted" />
+      </div>,
+    );
     expect(document.title).toBe("Mounted");
     renderResult.unmount();
     expect(document.title).toBe("Unmounted");

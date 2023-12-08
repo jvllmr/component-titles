@@ -17,15 +17,7 @@ export default function DemoApp() {
   useComponentTitle("Component-titles Demo");
 
   return (
-    <Paper
-      m={0}
-      p={0}
-      sx={{
-        width: "100vw",
-        height: "100vh",
-      }}
-      radius={0}
-    >
+    <Paper m={0} p={0} w="100vw" h="100vh" radius={0}>
       <ScrollArea style={{ height: "100vh" }}>
         <Container style={{ marginTop: 50 }} fluid>
           <Center>

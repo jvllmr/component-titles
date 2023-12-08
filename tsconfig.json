@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2020",
 
-    "module": "ESNext",
-    "moduleResolution": "Node",
-
-    "lib": ["DOM", "DOM.Iterable"],
+    "module": "ES2020",
+    "moduleResolution": "Bundler",
+    "isolatedModules": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
     "removeComments": true,
     "declaration": true,
 
@@ -15,13 +15,13 @@
     "strict": true,
 
     "esModuleInterop": true,
+    "baseUrl": ".",
 
-    "paths": {
-      "@jvllmr/*": ["./packages/*/src"]
-    },
-    "jsx": "preserve"
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "checkJs": true
   },
-  "include": ["packages/**/src"],
-  "exclude": ["node_modules"],
-  "compileOnSave": true
+  "include": ["packages/**/src"]
 }

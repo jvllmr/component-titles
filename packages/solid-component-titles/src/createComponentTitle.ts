@@ -11,12 +11,10 @@ import {
   Accessor,
   createEffect,
   createMemo,
-  createSignal,
-  on,
+  createUniqueId,
   onCleanup,
   onMount,
 } from "solid-js";
-import { v4 as uuidv4 } from "uuid";
 
 function refSetter<TData>(data: TData, key: keyof TData) {
   return (value: TData[keyof TData]) => (data[key] = value);
@@ -29,18 +27,19 @@ function refGetter<TData, TDataKey extends keyof TData>(
   return () => data[key];
 }
 
-export function useComponentTitle(title: Accessor<string>) {
+export function createComponentTitle(title: Accessor<string>) {
+  const id = createUniqueId();
   const componentInfo: {
     iAmLast: boolean;
     mountedTitle: string;
-    uuid: string;
+
     titleBeforeMount: string;
     behindMe: IDOMTitleComponentData | undefined;
     beforeMe: IDOMTitleComponentData | undefined;
   } = {
     iAmLast: true,
     mountedTitle: "",
-    uuid: uuidv4(),
+
     titleBeforeMount: "",
     behindMe: undefined,
     beforeMe: undefined,
@@ -50,7 +49,7 @@ export function useComponentTitle(title: Accessor<string>) {
     handleRegisterFactory({
       iAmLast: refGetter(componentInfo, "iAmLast"),
       mountedTitle: refGetter(componentInfo, "mountedTitle"),
-      myId: refGetter(componentInfo, "uuid"),
+      myId: () => id,
       titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
       setBehindMe: refSetter(componentInfo, "behindMe"),
       setIAmLast: refSetter(componentInfo, "iAmLast"),
@@ -62,7 +61,7 @@ export function useComponentTitle(title: Accessor<string>) {
         beforeMe: refGetter(componentInfo, "beforeMe"),
         behindMe: refGetter(componentInfo, "behindMe"),
         mountedTitle: refGetter(componentInfo, "mountedTitle"),
-        myId: refGetter(componentInfo, "uuid"),
+        myId: () => id,
         titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
         setBeforeMe: refSetter(componentInfo, "beforeMe"),
         setBehindMe: refSetter(componentInfo, "behindMe"),
@@ -87,7 +86,7 @@ export function useComponentTitle(title: Accessor<string>) {
       beforeMe: refGetter(componentInfo, "beforeMe"),
       behindMe: refGetter(componentInfo, "behindMe"),
       mountedTitle: refGetter(componentInfo, "mountedTitle"),
-      myId: refGetter(componentInfo, "uuid"),
+      myId: () => id,
       titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
       setBeforeMe: refSetter(componentInfo, "beforeMe"),
       setBehindMe: refSetter(componentInfo, "behindMe"),
@@ -110,12 +109,12 @@ export function useComponentTitle(title: Accessor<string>) {
       handleUnregister: handleUnregister(),
       titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
       beforeMe: refGetter(componentInfo, "beforeMe"),
-      myId: refGetter(componentInfo, "uuid"),
+      myId: () => id,
       behindMe: refGetter(componentInfo, "behindMe"),
       mountedTitle: refGetter(componentInfo, "mountedTitle"),
       revertTitle: revertTitle(),
     });
   });
 
-  createEffect(on(title, (value) => register()(value)));
+  createEffect(() => register()(title()));
 }
