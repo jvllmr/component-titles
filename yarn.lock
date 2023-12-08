@@ -769,9 +769,9 @@
     highlight.js "^11.9.0"
 
 "@mantine/core@^7.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.3.0.tgz#04a449367e45af4e742fd42e6cc290b7e385f9ef"
-  integrity sha512-RU8txZtfAu7mbb0mzKHFysVgteHP3ClAFmQzMPBf86p+JCOu+e6i5eq+qqv9iiGzrE50ZGuw/WtWYNi5VeJQ7w==
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.3.1.tgz#43a377dda49248777833698c193543dd9b3dd44f"
+  integrity sha512-WIesapVzK1ERFcALuosaEPuODN/k/FGkryf2d12R7vsDmxmWqX6yNzPUoJDy6j20ueAkyyg4beJZ4PuZfCRW9Q==
   dependencies:
     "@floating-ui/react" "^0.24.8"
     clsx "2.0.0"
