@@ -39,17 +39,20 @@ function MyLoadingComponent() {
 }
 ```
 
-
 ## API Reference
 
 ### useComponentTitle
+
 useComponentTitle hook API
+
 ```typescript
-function useComponentTitle(title: string): void
+function useComponentTitle(title: string): void;
 ```
 
 ### DocumentTitle
+
 DocumentTitle component API
+
 ```typescript
-function DocumentTitle(props: {title: string}): null
+function DocumentTitle(props: { title: string }): null;
 ```
