@@ -761,9 +761,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
 "@mantine/code-highlight@^7.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@mantine/code-highlight/-/code-highlight-7.3.0.tgz#0d28fbee2eb8576100b2c2acb992c413e3952c31"
-  integrity sha512-SH51W1FT4BLwXaRSYd8r1Mv+8DewndCk/uFUK0zbDDq8iGnIEP6Q0nedyNgany7QIgbbTQc/kJyt8VGZFYE/mQ==
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@mantine/code-highlight/-/code-highlight-7.3.1.tgz#22b82be7de79ffb4a02dab8c55defcc1c24f2378"
+  integrity sha512-39hegsELSI2ZfQQDa3CjwU79Jo4kb4lru1AxUcU90p8c0Z09NDL/bDskzco4XWQyOpMQv+j4rm5FrsjNkFGg3A==
   dependencies:
     clsx "2.0.0"
     highlight.js "^11.9.0"
