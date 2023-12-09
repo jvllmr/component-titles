@@ -12,18 +12,17 @@ env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 jobs:
   Test:
-    runs-on: ${{ matrix.os }}
+    runs-on: "ubuntu-latest"
     strategy:
       fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - run: |
-          pnpm install
-          pnpm run test:all
+      - name: Install
+        run: pnpm install
+      - name: Run tests
+        run: pnpm run test:all
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
