@@ -15,7 +15,14 @@
       "type": "node-terminal",
       "name": "Demo Site",
       "request": "launch",
-      "cwd": "${workspaceFolder}/packages/component-titles-demo",
+      "cwd": "${workspaceFolder}/packages/react-component-titles-demo",
+      "command": "pnpm run dev"
+    },
+    {
+      "type": "node-terminal",
+      "name": "Solid site",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/solid-component-titles-demo",
       "command": "pnpm run dev"
     }
   ]

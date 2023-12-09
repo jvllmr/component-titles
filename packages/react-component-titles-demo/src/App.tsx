@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { useComponentTitle } from "@jvllmr/react-component-titles";
 import {
   Center,
@@ -14,7 +13,7 @@ import { TitleComponentExample } from "./TitleComponent";
 import "./index.css";
 
 export default function DemoApp() {
-  useComponentTitle("Component-titles Demo");
+  useComponentTitle("Component-titles React Demo");
 
   return (
     <Paper m={0} p={0} w="100vw" h="100vh" radius={0}>

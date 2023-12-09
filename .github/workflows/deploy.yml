@@ -17,7 +17,7 @@ jobs:
         with:
           version: 8
       - name: Build
-        run: cd packages/component-titles-demo && pnpm install && pnpm run build && touch build/.nojekyll
+        run: cd packages/react-component-titles-demo && pnpm install && pnpm run build && touch build/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
