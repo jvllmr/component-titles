@@ -43,7 +43,6 @@
   "devDependencies": {
     "@jvllmr/component-titles-test": "workspace:*",
     "@solidjs/testing-library": "^0.8.0",
-    "solid-js": "^1.7.5",
     "vite-plugin-solid": "^2.8.0",
     "tsup-preset-solid": "^2.1.0"
   }

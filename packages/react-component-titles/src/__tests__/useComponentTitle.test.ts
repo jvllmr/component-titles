@@ -6,9 +6,22 @@ import { renderHook } from "@testing-library/react";
 import { useComponentTitle } from "../useComponentTitle";
 
 const createTitle: TCreateTitleFunction = (title: string) => {
-  return renderHook((newTitle: string) => useComponentTitle(newTitle), {
-    initialProps: title,
-  });
+  const renderResult = renderHook(
+    (newTitle: string) => useComponentTitle(newTitle),
+    {
+      initialProps: title,
+    },
+  );
+
+  return {
+    ...renderResult,
+    rerender: async (title) => {
+      renderResult.rerender(title);
+    },
+    unmount: async () => {
+      renderResult.unmount();
+    },
+  };
 };
 
 createHookTests(createTitle);

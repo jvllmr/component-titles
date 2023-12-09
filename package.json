@@ -2,7 +2,8 @@
   "name": "component-titles",
   "private": true,
   "scripts": {
-    "test:all": "nx run-many -t test"
+    "test:all": "nx run-many -t test",
+    "build:all": "nx run-many -t build"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",

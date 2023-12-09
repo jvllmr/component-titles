@@ -1,30 +1,47 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { render } from "@solidjs/testing-library";
 import { DocumentTitle } from "../DocumentTitle";
-import { createSignal } from "solid-js";
+import { createRoot, createSignal } from "solid-js";
 import { describe, expect, it } from "vitest";
+import { waitForResolve } from "./testUtils";
 describe("DocumentTitle", () => {
-  it("sets title when it mounts and resets when it unmounts", () => {
+  it("sets title when it mounts and resets when it unmounts", async () => {
     document.title = "Unmounted";
-    const renderResult = render(() => <DocumentTitle title="Toasty Buns" />);
+    const [dispose] = createRoot((dispose) => {
+      const renderResult = render(() => <DocumentTitle title="Toasty Buns" />);
+
+      return [dispose, renderResult];
+    });
+    await waitForResolve();
     expect(document.title).toBe("Toasty Buns");
-    renderResult.unmount();
+    dispose();
     expect(document.title).toBe("Unmounted");
   });
 
-  it("prioritizes titles deeper in the tree", () => {
+  it("prioritizes titles deeper in the tree", async () => {
     document.title = "Unmounted";
-    const [mounted, setMounted] = createSignal(true);
-    const renderResult = render(() => (
-      <div>
-        <DocumentTitle title="Mounted" />
-        <div>{mounted() ? <DocumentTitle title="Toasty Buns" /> : null}</div>
-      </div>
-    ));
+    const [dispose, setMounted] = createRoot((dispose) => {
+      const [mounted, setMounted] = createSignal(true);
+      const renderResult = render(() => (
+        <div>
+          <DocumentTitle title="Mounted" />
+          <div>{mounted() ? <DocumentTitle title="Toasty Buns" /> : null}</div>
+        </div>
+      ));
+
+      return [
+        dispose,
+        async (mounted: boolean) => {
+          setMounted(mounted);
+          await waitForResolve();
+        },
+        renderResult,
+      ];
+    });
     expect(document.title).toBe("Toasty Buns");
-    setMounted(false);
+    await setMounted(false);
     expect(document.title).toBe("Mounted");
-    renderResult.unmount();
+    dispose();
     expect(document.title).toBe("Unmounted");
   });
 });

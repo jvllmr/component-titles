@@ -1,20 +1,27 @@
-import {
-  createHookTests,
-  TCreateTitleFunction,
-} from "@jvllmr/component-titles-test";
-import { renderHook } from "@solidjs/testing-library";
+import { createHookTests } from "@jvllmr/component-titles-test";
+import type { TCreateTitleFunction } from "@jvllmr/component-titles-test";
+
 import { createRoot, createSignal } from "solid-js";
 import { createComponentTitle } from "../createComponentTitle";
-import { createOwner } from "solid-js/types/server/reactive.js";
+
+import { waitForResolve } from "./testUtils";
+
 const createTitle: TCreateTitleFunction = (title: string) => {
-  const [titleSignal, setTitle] = createSignal(title);
-  const { cleanup } = renderHook(createComponentTitle, {
-    initialProps: [titleSignal],
+  const [dispose, setTitle] = createRoot((dispose) => {
+    const [titleSignal, setTitle] = createSignal(title);
+    createComponentTitle(titleSignal);
+    return [dispose, setTitle];
   });
 
   return {
-    unmount: cleanup,
-    rerender: (title) => setTitle(title),
+    unmount: async () => {
+      dispose();
+      await waitForResolve();
+    },
+    rerender: async (title: string) => {
+      setTitle(title);
+      await waitForResolve();
+    },
   };
 };
 
