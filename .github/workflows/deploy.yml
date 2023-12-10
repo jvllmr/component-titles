@@ -16,9 +16,13 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - name: Build
-        run: cd packages/react-component-titles-demo && pnpm install && pnpm run build && touch build/.nojekyll
 
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build all
+        run: pnpm build:all
+      - name: Add .nojekyll
+        run: cd packages/react-component-titles-demo && touch build/.nojekyll
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
