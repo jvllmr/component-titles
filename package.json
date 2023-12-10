@@ -21,5 +21,6 @@
     "vitest": "^1.0.4"
   },
   "packageManager": "pnpm@8.11.0",
-  "namespace": "@jvllmr"
+  "namespace": "@jvllmr",
+  "version": "1.0.1"
 }
