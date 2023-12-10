@@ -1,10 +1,10 @@
 {
   "name": "@jvllmr/react-component-titles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Component-bound titles for React",
   "type": "module",
   "repository": {
-    "url": "https://github.com/jvllmr/component-titles",
+    "url": "git+https://github.com/jvllmr/component-titles.git",
     "type": "git",
     "directory": "packages/react-component-titles"
   },

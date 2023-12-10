@@ -1,9 +1,9 @@
 {
   "name": "@jvllmr/component-titles-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Component-bound titles core",
   "repository": {
-    "url": "https://github.com/jvllmr/component-titles",
+    "url": "git+https://github.com/jvllmr/component-titles.git",
     "type": "git",
     "directory": "packages/component-titles-core"
   },
