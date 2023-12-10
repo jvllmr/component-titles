@@ -8,7 +8,12 @@ export default defineConfig({
     watch: false,
     setupFiles: ["test-setup.ts"],
     environment: "jsdom",
-    coverage: { provider: "istanbul" },
+    coverage: {
+      provider: "istanbul",
+      all: true,
+      clean: true,
+      allowExternal: true,
+    },
   },
   plugins: [solid()],
 });
