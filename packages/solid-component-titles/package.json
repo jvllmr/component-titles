@@ -1,7 +1,7 @@
 {
   "name": "@jvllmr/solid-component-titles",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Component-bound titles for Solid",
   "repository": {
     "url": "git+https://github.com/jvllmr/component-titles.git",

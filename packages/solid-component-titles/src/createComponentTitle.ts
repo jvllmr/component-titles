@@ -29,7 +29,7 @@ function refGetter<TData, TDataKey extends keyof TData>(
 
 export function createComponentTitle(title: Accessor<string>) {
   const id = createUniqueId();
-  console.log(id);
+
   const componentInfo: {
     iAmLast: boolean;
     mountedTitle: string;
