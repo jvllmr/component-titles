@@ -1,8 +1,10 @@
 # Component-titles
 
-![Routine Checks](https://github.com/jvllmr/component-titles/actions/workflows/test.yml/badge.svg)
-![Codecov](https://img.shields.io/codecov/c/github/jvllmr/component-titles?style=plastic)
-![npm](https://img.shields.io/npm/dm/@jvllmr/component-titles-core?style=plastic)
+[![Routine Checks](https://github.com/jvllmr/component-titles/actions/workflows/test.yml/badge.svg)](https://github.com/jvllmr/component-titles/actions/workflows/test.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/jvllmr/component-titles?style=plastic)](https://app.codecov.io/gh/jvllmr/component-titles/tree/main)
+[![npm](https://img.shields.io/npm/dm/@jvllmr/component-titles-core?style=plastic)](https://www.npmjs.com/package/@jvllmr/component-titles-core)
+[![Bundlesize React](https://deno.bundlejs.com/badge?q=@jvllmr/react-component-titles&treeshake=[*]&config={%22esbuild%22:{%22external%22:[%22react%22,%22react-dom%22]}}&badge=detailed)](https://bundlejs.com/?q=%40jvllmr%2Freact-component-titles&treeshake=%5B*%5D&config=%7B%22esbuild%22%3A%7B%22external%22%3A%5B%22react%22%2C%22react-dom%22%5D%7D%7D)
+[![Bundlesize Solid](https://deno.bundlejs.com/badge?q=@jvllmr/solid-component-titles&treeshake=[*]&config={%22esbuild%22:{%22external%22:[%22solid-js%22]}}&badge=detailed)](https://bundlejs.com/?q=%40jvllmr%2Fsolid-component-titles&treeshake=%5B*%5D&config=%7B%22esbuild%22%3A%7B%22external%22%3A%5B%22solid-js%22%5D%7D%7D)
 
 A hook for handling browser Document titles bound to components. Previous titles are restored when a component unmounts.
 
