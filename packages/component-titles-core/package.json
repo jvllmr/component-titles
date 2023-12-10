@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsup",
     "test:build": "publint --strict",
-    "prepublish": "build"
+    "prepublish": "tsup"
   },
   "main": "./build/index.cjs",
   "module": "./build/index.js",
