@@ -1,7 +1,4 @@
 import { createHookTests } from "./hookTest";
-import type { TCreateHookTitleFunction, TTestContextHandler } from "./hookTest";
+import type { TCreateHookTitleFunction } from "./hookTest";
 export { createHookTests };
-export type {
-  TCreateHookTitleFunction as TCreateTitleFunction,
-  TTestContextHandler,
-};
+export type { TCreateHookTitleFunction as TCreateTitleFunction };

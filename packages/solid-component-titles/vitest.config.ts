@@ -6,7 +6,7 @@ export default defineConfig({
     name: "solid-component-titles",
     dir: "./src",
     watch: false,
-
+    setupFiles: ["test-setup.ts"],
     environment: "jsdom",
     coverage: { provider: "istanbul" },
   },

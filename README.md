@@ -33,9 +33,9 @@ You can find a React demo [here](https://jvllmr.github.io/component-titles)
 import { useComponentTitle } from "@jvllmr/react-component-titles";
 
 function MyLoadingComponent() {
-  useComponentTitle("Loading...");
+	useComponentTitle("Loading...");
 
-  return <Loader />;
+	return <Loader />;
 }
 ```
 

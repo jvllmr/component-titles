@@ -32,7 +32,13 @@ export function TitleButtonComponent(props: { title: string }) {
   const [active, setActive] = createSignal(false);
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        "align-items": "center",
+        "flex-direction": "column",
+      }}
+    >
       <TitleComponent title={props.title} active={active()} />
       <div>
         <button

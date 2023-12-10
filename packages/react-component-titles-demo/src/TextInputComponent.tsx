@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { useComponentTitle } from "@jvllmr/react-component-titles";
 import { CodeHighlight } from "@mantine/code-highlight";
 import { Paper, TextInput, Title } from "@mantine/core";

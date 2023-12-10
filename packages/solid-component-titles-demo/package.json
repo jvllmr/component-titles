@@ -9,11 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.8.5",
+    "@jvllmr/solid-component-titles": "workspace:*",
     "@tabler/icons-solidjs": "^2.43.0",
-    "@jvllmr/solid-component-titles": "workspace:*"
+    "solid-js": "^1.8.5"
   },
   "devDependencies": {
+    "solid-devtools": "^0.29.2",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
     "vite-plugin-solid": "^2.7.2"

@@ -1,4 +1,5 @@
-let uuidStore: string[] = [];
+let componentIdStore: string[] = [];
+
 export interface IDOMTitleComponentData {
   uuid: string;
   title: string;
@@ -158,8 +159,11 @@ export const revertTitleFactory =
   }) =>
   () => {
     if (
+      // current title matches my title
       document.title === mountedTitle() &&
+      // no title before me; title is not the same as before me
       (!beforeMe() || (beforeMe() && beforeMe()?.title !== mountedTitle())) &&
+      // no title on top of me
       !behindMe()
     )
       document.title = titleBeforeMount();
@@ -203,7 +207,7 @@ export function onUnmount({
     titleBeforeMount: nextUnregisterEventProps.titleBeforeMount(),
   };
   document.dispatchEvent(createUnregisterEvent(unregisterEventProps));
-  uuidStore = uuidStore.filter(
+  componentIdStore = componentIdStore.filter(
     (val: string) => val !== nextUnregisterEventProps.myId(),
   );
 }
@@ -238,9 +242,10 @@ export const registerFactory =
     if (typeof title === "string") {
       const trimmed = title.trim();
 
-      let registerAllowed = mountedTitle() && !uuidStore.includes(myId());
+      let registerAllowed =
+        mountedTitle() && !componentIdStore.includes(myId());
 
-      if (!trimmed || (trimmed && mountedTitle() !== trimmed)) {
+      if (trimmed === "" || (trimmed && mountedTitle() !== trimmed)) {
         document.dispatchEvent(
           createUnregisterEvent({
             beforeMe: beforeMe(),
@@ -250,6 +255,7 @@ export const registerFactory =
             titleBeforeMount: titleBeforeMount(),
           }),
         );
+
         revertTitle();
 
         setMountedTitle("");
@@ -258,7 +264,9 @@ export const registerFactory =
         setBeforeMe(undefined);
         setIAmLast(true);
         if (trimmed) registerAllowed = true;
-        uuidStore = uuidStore.filter((val: string) => val !== myId());
+        componentIdStore = componentIdStore.filter(
+          (val: string) => val !== myId(),
+        );
       }
 
       if (trimmed && mountedTitle() !== trimmed && registerAllowed) {
@@ -266,8 +274,8 @@ export const registerFactory =
         setMountedTitle(trimmed);
 
         document.title = trimmed;
-        if (!uuidStore.includes(myId())) {
-          uuidStore.push(myId());
+        if (!componentIdStore.includes(myId())) {
+          componentIdStore.push(myId());
 
           const registerEvent = new CustomEvent<IDOMTitleRegisterEventData>(
             registerDOMTitle,

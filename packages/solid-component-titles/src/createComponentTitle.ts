@@ -29,6 +29,7 @@ function refGetter<TData, TDataKey extends keyof TData>(
 
 export function createComponentTitle(title: Accessor<string>) {
   const id = createUniqueId();
+  console.log(id);
   const componentInfo: {
     iAmLast: boolean;
     mountedTitle: string;
@@ -55,34 +56,30 @@ export function createComponentTitle(title: Accessor<string>) {
       setIAmLast: refSetter(componentInfo, "iAmLast"),
     }),
   );
-  const handleUnregister = createMemo(
-    () =>
-      handleUnregisterFactory({
-        beforeMe: refGetter(componentInfo, "beforeMe"),
-        behindMe: refGetter(componentInfo, "behindMe"),
-        mountedTitle: refGetter(componentInfo, "mountedTitle"),
-        myId: () => id,
-        titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
-        setBeforeMe: refSetter(componentInfo, "beforeMe"),
-        setBehindMe: refSetter(componentInfo, "behindMe"),
-        setIAmLast: refSetter(componentInfo, "iAmLast"),
-        setTitleBeforeMount: refSetter(componentInfo, "titleBeforeMount"),
-      }),
-    [],
+  const handleUnregister = createMemo(() =>
+    handleUnregisterFactory({
+      beforeMe: refGetter(componentInfo, "beforeMe"),
+      behindMe: refGetter(componentInfo, "behindMe"),
+      mountedTitle: refGetter(componentInfo, "mountedTitle"),
+      myId: () => id,
+      titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
+      setBeforeMe: refSetter(componentInfo, "beforeMe"),
+      setBehindMe: refSetter(componentInfo, "behindMe"),
+      setIAmLast: refSetter(componentInfo, "iAmLast"),
+      setTitleBeforeMount: refSetter(componentInfo, "titleBeforeMount"),
+    }),
   );
-  const revertTitle = createMemo(
-    () =>
-      revertTitleFactory({
-        beforeMe: refGetter(componentInfo, "beforeMe"),
-        behindMe: refGetter(componentInfo, "behindMe"),
-        mountedTitle: refGetter(componentInfo, "mountedTitle"),
-        titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
-      }),
-    [],
+  const revertTitle = createMemo(() =>
+    revertTitleFactory({
+      beforeMe: refGetter(componentInfo, "beforeMe"),
+      behindMe: refGetter(componentInfo, "behindMe"),
+      mountedTitle: refGetter(componentInfo, "mountedTitle"),
+      titleBeforeMount: refGetter(componentInfo, "titleBeforeMount"),
+    }),
   );
   const register = createMemo(() =>
     registerFactory({
-      revertTitle,
+      revertTitle: revertTitle(),
       beforeMe: refGetter(componentInfo, "beforeMe"),
       behindMe: refGetter(componentInfo, "behindMe"),
       mountedTitle: refGetter(componentInfo, "mountedTitle"),

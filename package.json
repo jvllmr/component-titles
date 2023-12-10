@@ -10,7 +10,7 @@
     "@types/node": "^20.10.4",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
-    "@vitest/coverage-istanbul": "^1.0.3",
+    "@vitest/coverage-istanbul": "^1.0.4",
     "esbuild-plugin-file-path-extensions": "^2.0.0",
     "eslint": "^8.55.0",
     "jsdom": "^23.0.1",
@@ -18,7 +18,7 @@
     "publint": "^0.2.6",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "vitest": "^1.0.3"
+    "vitest": "^1.0.4"
   },
   "packageManager": "pnpm@8.11.0",
   "namespace": "@jvllmr"
