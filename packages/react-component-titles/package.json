@@ -14,7 +14,8 @@
   "scripts": {
     "build": "tsup",
     "test:build": "publint --strict",
-    "test": "vitest run --coverage"
+    "test": "vitest run --coverage",
+    "prepublish": "build"
   },
   "main": "./build/index.cjs",
   "module": "./build/index.js",

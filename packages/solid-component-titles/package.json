@@ -2,15 +2,21 @@
   "name": "@jvllmr/solid-component-titles",
   "type": "module",
   "version": "1.0.0",
-  "description": "Component-bound titles for React",
-  "repository": "https://github.com/jvllmr/component-titles",
+  "description": "Component-bound titles for Solid",
+  "repository": {
+    "url": "https://github.com/jvllmr/component-titles",
+    "type": "git",
+    "directory": "packages/solid-component-titles"
+  },
   "author": "Jan Vollmer <jan@vllmr.dev>",
   "license": "MIT",
   "scripts": {
     "test": "vitest run --coverage",
     "build": "tsup",
-    "test:build": "publint --strict"
+    "test:build": "publint --strict",
+    "prepublish": "build"
   },
+  "sideEffects": false,
   "main": "./build/index.cjs",
   "module": "./build/index.js",
   "types": "./build/index.d.ts",

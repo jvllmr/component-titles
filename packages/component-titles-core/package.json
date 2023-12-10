@@ -5,7 +5,7 @@
   "repository": {
     "url": "https://github.com/jvllmr/component-titles",
     "type": "git",
-    "directory": "packages/react-component-titles"
+    "directory": "packages/component-titles-core"
   },
   "type": "module",
   "author": "Jan Vollmer <jan@vllmr.dev>",
@@ -14,7 +14,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
-    "test:build": "publint --strict"
+    "test:build": "publint --strict",
+    "prepublish": "build"
   },
   "main": "./build/index.cjs",
   "module": "./build/index.js",
