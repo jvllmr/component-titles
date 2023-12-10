@@ -8,6 +8,7 @@
     "type": "git",
     "directory": "packages/react-component-titles"
   },
+  "readme": "../../README.md",
   "homepage": "https://jvllmr.github.io/component-titles",
   "author": "Jan Vollmer <jan@vllmr.dev>",
   "license": "MIT",
@@ -34,6 +35,10 @@
     },
     "./package.json": "./package.json"
   },
+  "files": [
+    "build",
+    "src"
+  ],
   "dependencies": {
     "@jvllmr/component-titles-core": "workspace:*"
   },
