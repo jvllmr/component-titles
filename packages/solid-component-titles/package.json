@@ -8,6 +8,7 @@
     "type": "git",
     "directory": "packages/solid-component-titles"
   },
+  "homepage": "https://jvllmr.github.io/component-titles",
   "author": "Jan Vollmer <jan@vllmr.dev>",
   "license": "MIT",
   "scripts": {
@@ -51,5 +52,13 @@
     "@solidjs/testing-library": "^0.8.0",
     "tsup-preset-solid": "^2.1.0",
     "vite-plugin-solid": "^2.8.0"
-  }
+  },
+  "keywords": [
+    "document",
+    "DOM",
+    "title",
+    "core",
+    "component",
+    "solid"
+  ]
 }

@@ -39,5 +39,12 @@
   ],
   "homepage": "https://jvllmr.github.io/component-titles",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": [
+    "document",
+    "DOM",
+    "title",
+    "core",
+    "component"
+  ]
 }
