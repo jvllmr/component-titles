@@ -1,6 +1,6 @@
 {
   "name": "@jvllmr/react-component-titles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Component-bound titles for React",
   "type": "module",
   "repository": {
@@ -8,7 +8,6 @@
     "type": "git",
     "directory": "packages/react-component-titles"
   },
-  "readme": "../../README.md",
   "homepage": "https://jvllmr.github.io/component-titles",
   "author": "Jan Vollmer <jan@vllmr.dev>",
   "license": "MIT",

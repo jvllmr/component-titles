@@ -15,3 +15,12 @@ repos:
           - "prettier@latest"
           - "typescript@latest"
           - "prettier-plugin-organize-imports@latest"
+  - repo: local
+    hooks:
+      - id: readme
+        name: Copy Readme
+        entry: copy_readme.sh
+        language: script
+        pass_filenames: false
+        types:
+          - "markdown"

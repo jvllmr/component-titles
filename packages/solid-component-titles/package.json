@@ -1,14 +1,13 @@
 {
   "name": "@jvllmr/solid-component-titles",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Component-bound titles for Solid",
   "repository": {
     "url": "https://github.com/jvllmr/component-titles",
     "type": "git",
     "directory": "packages/solid-component-titles"
   },
-  "readme": "../../README.md",
   "homepage": "https://jvllmr.github.io/component-titles",
   "author": "Jan Vollmer <jan@vllmr.dev>",
   "license": "MIT",

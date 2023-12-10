@@ -1,13 +1,12 @@
 {
   "name": "@jvllmr/component-titles-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Component-bound titles core",
   "repository": {
     "url": "https://github.com/jvllmr/component-titles",
     "type": "git",
     "directory": "packages/component-titles-core"
   },
-  "readme": "../../README.md",
   "type": "module",
   "author": "Jan Vollmer <jan@vllmr.dev>",
   "license": "MIT",
