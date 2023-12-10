@@ -20,7 +20,7 @@
     "typescript": "^5.3.3",
     "vitest": "^1.0.4"
   },
-  "packageManager": "pnpm@8.11.0",
+  "packageManager": "pnpm@8.12.0",
   "namespace": "@jvllmr",
   "version": "1.0.1"
 }
