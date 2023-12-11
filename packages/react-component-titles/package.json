@@ -42,14 +42,13 @@
     "@jvllmr/component-titles-core": "workspace:*"
   },
   "peerDependencies": {
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
     "@jvllmr/component-titles-test": "workspace:*",
     "@testing-library/react": "^14.0.0",
-    "@types/react": ">=16.0.0",
-    "react": ">=16.0.0"
+    "@types/react": ">=18.0.0"
   },
   "keywords": [
     "document",
