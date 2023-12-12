@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/component-titles/assets/:asset*",
+      "destination": "/assets/:asset*"
+    },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
