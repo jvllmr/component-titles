@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "test:all": "nx run-many -t test",
-    "build:all": "nx run-many -t build"
+    "build:all": "nx run-many -t build",
+    "test:ci": "nx affected -t build --parallel=3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
@@ -15,6 +16,7 @@
     "eslint": "^8.55.0",
     "jsdom": "^23.0.1",
     "nx": "17.2.6",
+    "prettier": "^3.1.1",
     "publint": "^0.2.6",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
