@@ -22,7 +22,7 @@ importers:
         version: 6.15.0(eslint@8.56.0)(typescript@5.3.3)
       '@vitest/coverage-istanbul':
         specifier: ^1.0.4
-        version: 1.0.4(vitest@1.1.0)
+        version: 1.1.0(vitest@1.1.0)
       esbuild-plugin-file-path-extensions:
         specifier: ^2.0.0
         version: 2.0.0
@@ -2200,8 +2200,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vitest/coverage-istanbul@1.0.4(vitest@1.1.0):
-    resolution: {integrity: sha512-6qoSzTR+sanwY/dREqu6OFJupo/mHzCcboh03rLwqH2V2B39505lDr9FpqaLwU1vQgeUKNA+CdHPkpNpusxkDw==}
+  /@vitest/coverage-istanbul@1.1.0(vitest@1.1.0):
+    resolution: {integrity: sha512-sjHGQQu7lkJUYSBMOR3f9AyOlK1LBVr0v7LMar/4i167ltabRWlQ2STBDM4P6Wl659NAcHlZ/RXxrAgJPavDMA==}
     peerDependencies:
       vitest: ^1.0.0
     dependencies:
