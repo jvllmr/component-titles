@@ -15,10 +15,10 @@ importers:
         specifier: ^20.10.4
         version: 20.11.5
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.14.0
+        specifier: ^6.14.0 || ^7.0.0
         version: 6.19.0(@typescript-eslint/parser@6.19.0)(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/parser':
-        specifier: ^6.14.0
+        specifier: ^6.14.0 || ^7.0.0
         version: 6.19.0(eslint@8.56.0)(typescript@5.3.3)
       '@vitest/coverage-istanbul':
         specifier: ^1.0.4
