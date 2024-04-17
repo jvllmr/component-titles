@@ -30,7 +30,7 @@ importers:
         specifier: ^8.55.0
         version: 8.56.0
       jsdom:
-        specifier: ^23.0.1
+        specifier: ^23.0.1 || ^24.0.0
         version: 23.0.1
       nx:
         specifier: 18.3.1
