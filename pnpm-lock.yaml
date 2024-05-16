@@ -33,8 +33,8 @@ importers:
         specifier: ^23.0.1 || ^24.0.0
         version: 23.0.1
       nx:
-        specifier: 18.3.1
-        version: 18.3.1
+        specifier: 18.3.5
+        version: 18.3.5
       prettier:
         specifier: ^3.1.1
         version: 3.1.1
@@ -1546,11 +1546,11 @@ packages:
     resolution: {integrity: sha512-1qZU1Q5El0IjE7JT/ucvJNzdr2hL3W8Rm27xNf1p6gb3Nw8pGnZmxp6/GEW9h+I1k1cICxXNq25hBwknTQ7yhg==}
     dev: true
 
-  /@nrwl/tao@18.3.1:
-    resolution: {integrity: sha512-mDKuTooqeyA3i5Cmr6u2sFL/KQ1jS6ibVoOhAEAN0DACA4UtPor1ABTRMCiU4ZObRI49E5Gp2W18RacHjR4puQ==}
+  /@nrwl/tao@18.3.5:
+    resolution: {integrity: sha512-gB7Vxa6FReZZEGva03Eh+84W8BSZOjsNyXboglOINu6d8iZZ0eotSXGziKgjpkj3feZ1ofKZMs0PRObVAOROVw==}
     hasBin: true
     dependencies:
-      nx: 18.3.1
+      nx: 18.3.5
       tslib: 2.6.2
     transitivePeerDependencies:
       - '@swc-node/register'
@@ -1558,8 +1558,8 @@ packages:
       - debug
     dev: true
 
-  /@nx/nx-darwin-arm64@18.3.1:
-    resolution: {integrity: sha512-nUIySQHyK/6NX1v10DZJR4ftNi3GLwdb6IhaBRJfS4oXvVG7prfamisSKPED4lNB316Fe6hF/1C8FNaQ4M9j6w==}
+  /@nx/nx-darwin-arm64@18.3.5:
+    resolution: {integrity: sha512-4I5UpZ/x2WO9OQyETXKjaYhXiZKUTYcLPewruRMODWu6lgTM9hHci0SqMQB+TWe3f80K8VT8J8x3+uJjvllGlg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -1567,8 +1567,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-darwin-x64@18.3.1:
-    resolution: {integrity: sha512-b/USfu7M3ePasidY0fgNlcyi18uxPQ0SKXRSUJ/veVBc+I5wfmYmcoXIQhFRnfnbRoYA7CqsNONZ3+rO/GCIgw==}
+  /@nx/nx-darwin-x64@18.3.5:
+    resolution: {integrity: sha512-Drn6jOG237AD/s6OWPt06bsMj0coGKA5Ce1y5gfLhptOGk4S4UPE/Ay5YCjq+/yhTo1gDHzCHxH0uW2X9MN9Fg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -1576,8 +1576,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-freebsd-x64@18.3.1:
-    resolution: {integrity: sha512-4/5GKlAiBvLa3Jx4LpjlAOGsMQQU+bbTnocbLmYevYnuszTCdq/o7DP85lPEwLi+GjapH7kgeH08OgVRxwwvlw==}
+  /@nx/nx-freebsd-x64@18.3.5:
+    resolution: {integrity: sha512-8tA8Yw0Iir4liFjffIFS5THTS3TtWY/No2tkVj91gwy/QQ/otvKbOyc5RCIPpbZU6GS3ZWfG92VyCSm06dtMFg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
@@ -1585,8 +1585,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-linux-arm-gnueabihf@18.3.1:
-    resolution: {integrity: sha512-+9fryIMdQ4Jm+nJVjPehitqo9NisMxAfkeCr+3F2GRYTrzR83QXRlxCPsg5LvujmmRBj/AeiWo3WprYIdXIsvQ==}
+  /@nx/nx-linux-arm-gnueabihf@18.3.5:
+    resolution: {integrity: sha512-BrPGAHM9FCGkB9/hbvlJhe+qtjmvpjIjYixGIlUxL3gGc8E/ucTyCnz5pRFFPFQlBM7Z/9XmbHvGPoUi/LYn5A==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -1594,8 +1594,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-linux-arm64-gnu@18.3.1:
-    resolution: {integrity: sha512-Gzlumv5xdm9pNc73VzaMpoRkV+1UMz2WwzuDWXQ5sLVUVe92aCUdw/cMMKs48zC71Xc+gX7DvOfdwvqyNyhNZA==}
+  /@nx/nx-linux-arm64-gnu@18.3.5:
+    resolution: {integrity: sha512-/Xd0Q3LBgJeigJqXC/Jck/9l5b+fK+FCM0nRFMXgPXrhZPhoxWouFkoYl2F1Ofr+AQf4jup4DkVTB5r98uxSCA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1603,8 +1603,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-linux-arm64-musl@18.3.1:
-    resolution: {integrity: sha512-zm2cf6rxlWJPxFOBTntstl9dCDtdheJQ9Vo/sv3icV1kIZTC/2jkhLUqNxslRc0v0q9qQgK2oP0dji1TMC+88g==}
+  /@nx/nx-linux-arm64-musl@18.3.5:
+    resolution: {integrity: sha512-r18qd7pUrl1haAZ/e9Q+xaFTsLJnxGARQcf/Y76q+K2psKmiUXoRlqd3HAOw43KTllaUJ5HkzLq2pIwg3p+xBw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1612,8 +1612,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-linux-x64-gnu@18.3.1:
-    resolution: {integrity: sha512-9W/lPEWuiGDkZyGix2xikFjyAO25+J/tQ1PBIeSJ3HOufwcru52cYS726/0KpxxIVt54noLED6zP9fN/zXZjag==}
+  /@nx/nx-linux-x64-gnu@18.3.5:
+    resolution: {integrity: sha512-vYrikG6ff4I9cvr3Ysk3y3gjQ9cDcvr3iAr+4qqcQ4qVE+OLL2++JDS6xfPvG/TbS3GTQpyy2STRBwiHgxTeJw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -1621,8 +1621,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-linux-x64-musl@18.3.1:
-    resolution: {integrity: sha512-RD+Ku/7exvw/kmTGqeD71S6H3Rvv4hZT6Ki67pbWlAk2GFc8W9nyy4zek77MeSrkoI0fXk/WFFos89V3n0Dwiw==}
+  /@nx/nx-linux-x64-musl@18.3.5:
+    resolution: {integrity: sha512-6np86lcYy3+x6kkW/HrBHIdNWbUu/MIsvMuNH5UXgyFs60l5Z7Cocay2f7WOaAbTLVAr0W7p4RxRPamHLRwWFA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -1630,8 +1630,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-win32-arm64-msvc@18.3.1:
-    resolution: {integrity: sha512-RbD5CuOnPpVzgasFlEMvIvDffuHh0JvJlNRWuZ2O7xw/8FoqKGqlnkGpNStqd95qQs7dvxTaYIHigdlp3A5WIQ==}
+  /@nx/nx-win32-arm64-msvc@18.3.5:
+    resolution: {integrity: sha512-H3p2ZVhHV1WQWTICrQUTplOkNId0y3c23X3A2fXXFDbWSBs0UgW7m55LhMcA9p0XZ7wDHgh+yFtVgu55TXLjug==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -1639,8 +1639,8 @@ packages:
     dev: true
     optional: true
 
-  /@nx/nx-win32-x64-msvc@18.3.1:
-    resolution: {integrity: sha512-M9IQMXdTljLM1L1+WHHGXPSLP5Z+HJbIhuUqrt7iPEYJjQ75bWkRfxMERDTclttMXOTbY847fZWnu6lS99g8Bw==}
+  /@nx/nx-win32-x64-msvc@18.3.5:
+    resolution: {integrity: sha512-xFwKVTIXSgjdfxkpriqHv5NpmmFILTrWLEkUGSoimuRaAm1u15YWx/VmaUQ+UWuJnmgqvB/so4SMHSfNkq3ijA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -4431,8 +4431,8 @@ packages:
   /nwsapi@2.2.7:
     resolution: {integrity: sha512-ub5E4+FBPKwAZx0UwIQOjYWGHTEq5sPqHQNRN8Z9e4A7u3Tj1weLJsL59yH9vmvqEtBHaOmT6cYQKIZOxp35FQ==}
 
-  /nx@18.3.1:
-    resolution: {integrity: sha512-2fnGMkhroul7GVrMLNeAsBzzwjdvKTzZ8X/Fr6VuvpNqgtsnre1Kz1f1WKvblOMWNh7c7aaTQFNeA02GgYUPKg==}
+  /nx@18.3.5:
+    resolution: {integrity: sha512-wWcvwoTgiT5okdrG0RIWm1tepC17bDmSpw+MrOxnjfBjARQNTURkiq4U6cxjCVsCxNHxCrlAaBSQLZeBgJZTzQ==}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -4444,7 +4444,7 @@ packages:
       '@swc/core':
         optional: true
     dependencies:
-      '@nrwl/tao': 18.3.1
+      '@nrwl/tao': 18.3.5
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.6
@@ -4479,16 +4479,16 @@ packages:
       yargs: 17.7.2
       yargs-parser: 21.1.1
     optionalDependencies:
-      '@nx/nx-darwin-arm64': 18.3.1
-      '@nx/nx-darwin-x64': 18.3.1
-      '@nx/nx-freebsd-x64': 18.3.1
-      '@nx/nx-linux-arm-gnueabihf': 18.3.1
-      '@nx/nx-linux-arm64-gnu': 18.3.1
-      '@nx/nx-linux-arm64-musl': 18.3.1
-      '@nx/nx-linux-x64-gnu': 18.3.1
-      '@nx/nx-linux-x64-musl': 18.3.1
-      '@nx/nx-win32-arm64-msvc': 18.3.1
-      '@nx/nx-win32-x64-msvc': 18.3.1
+      '@nx/nx-darwin-arm64': 18.3.5
+      '@nx/nx-darwin-x64': 18.3.5
+      '@nx/nx-freebsd-x64': 18.3.5
+      '@nx/nx-linux-arm-gnueabihf': 18.3.5
+      '@nx/nx-linux-arm64-gnu': 18.3.5
+      '@nx/nx-linux-arm64-musl': 18.3.5
+      '@nx/nx-linux-x64-gnu': 18.3.5
+      '@nx/nx-linux-x64-musl': 18.3.5
+      '@nx/nx-win32-arm64-msvc': 18.3.5
+      '@nx/nx-win32-x64-msvc': 18.3.5
     transitivePeerDependencies:
       - debug
     dev: true
