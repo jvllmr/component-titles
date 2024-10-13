@@ -9,5 +9,5 @@ export default tseslint.config(
     plugins: {
       "react-hooks": fixupPluginRules(eslintPluginReactHooks),
     },
-  }
+  },
 );
