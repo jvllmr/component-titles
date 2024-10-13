@@ -39,7 +39,7 @@
     "@mantine/code-highlight": "^7.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "@tabler/icons-react": "^2.0",
+    "@tabler/icons-react": "^3.19.0",
     "@jvllmr/react-component-titles": "workspace:*"
   },
   "devDependencies": {
