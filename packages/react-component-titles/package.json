@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@jvllmr/component-titles-test": "workspace:*",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^16.0.1",
     "@types/react": ">=18.0.0"
   },
   "keywords": [
