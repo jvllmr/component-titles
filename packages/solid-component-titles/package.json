@@ -53,9 +53,9 @@
   },
   "devDependencies": {
     "@jvllmr/component-titles-test": "workspace:*",
-    "@solidjs/testing-library": "^0.8.0",
-    "tsup-preset-solid": "^2.1.0",
-    "vite-plugin-solid": "^2.8.0"
+    "@solidjs/testing-library": "^0.8.10",
+    "tsup-preset-solid": "^2.2.0",
+    "vite-plugin-solid": "^2.10.2"
   },
   "keywords": [
     "document",
