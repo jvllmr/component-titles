@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@jvllmr/solid-component-titles": "workspace:*",
-    "@tabler/icons-solidjs": "^2.43.0",
+    "@tabler/icons-solidjs": "^3.19.0",
     "solid-js": "^1.8.5"
   },
   "devDependencies": {
