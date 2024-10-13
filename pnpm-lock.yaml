@@ -108,8 +108,8 @@ importers:
         specifier: ^7.0
         version: 7.3.1(react@18.2.0)
       '@tabler/icons-react':
-        specifier: ^2.0
-        version: 2.42.0(react@18.2.0)
+        specifier: ^3.19.0
+        version: 3.19.0(react@18.2.0)
       react:
         specifier: ^18.0.0
         version: 18.2.0
@@ -1529,21 +1529,21 @@ packages:
       '@solidjs/router': '>=0.6.0'
       solid-js: '>=1.0.0'
 
-  '@tabler/icons-react@2.42.0':
-    resolution: {integrity: sha512-2APr++u24P2mx9vJymJQJORRpu2Qej0rPrtAvgXu8YomHjLXVP+O1VtToSGyoSPH1ysA569XbxrwzOau9Ne12A==}
+  '@tabler/icons-react@3.19.0':
+    resolution: {integrity: sha512-AqEWGI0tQWgqo6ZjMO5yJ9sYT8oXLuAM/up0hN9iENS6IdtNZryKrkNSiMgpwweNTpl8wFFG/dAZ959S91A/uQ==}
     peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+      react: '>= 16'
 
   '@tabler/icons-solidjs@2.43.0':
     resolution: {integrity: sha512-OOwVzByIyHadstI+QbGeH1kJlsQ2EWcr35iu15nEL+KMkE4GqaQM2PO4nWkqtAQ/5shZyvfkbxWxvR5VpK0nwQ==}
     peerDependencies:
       solid-js: ^1.4.7
 
-  '@tabler/icons@2.42.0':
-    resolution: {integrity: sha512-ynV4iaC1c1mUhuAr9HRaoq8KrWYmZ0bJEpOh7qTBE+OfdDsdvQUe+0S7FW+DHkJ4RuxQMdO8djrZK7HrUw9YMA==}
-
   '@tabler/icons@2.43.0':
     resolution: {integrity: sha512-afToJMJj31Q9Put1/saemluLBvWhgzsF59QM/mJZZ7LLHW12ViumyQIwA31SRCH/HsYBEoRp2qHFt0QwIFWDFw==}
+
+  '@tabler/icons@3.19.0':
+    resolution: {integrity: sha512-A4WEWqpdbTfnpFEtwXqwAe9qf9sp1yRPvzppqAuwcoF0q5YInqB+JkJtSFToCyBpPVeLxJUxxkapLvt2qQgnag==}
 
   '@testing-library/dom@9.3.3':
     resolution: {integrity: sha512-fB0R+fa3AUqbLHWyxXa2kGVtf1Fe1ZZFr0Zp6AIbIAzXb2mKbEXl+PCQNUOaq5lbTab5tfctfXRNsWXxa2f7Aw==}
@@ -5128,10 +5128,9 @@ snapshots:
       '@testing-library/dom': 9.3.3
       solid-js: 1.8.7
 
-  '@tabler/icons-react@2.42.0(react@18.2.0)':
+  '@tabler/icons-react@3.19.0(react@18.2.0)':
     dependencies:
-      '@tabler/icons': 2.42.0
-      prop-types: 15.8.1
+      '@tabler/icons': 3.19.0
       react: 18.2.0
 
   '@tabler/icons-solidjs@2.43.0(solid-js@1.8.7)':
@@ -5139,9 +5138,9 @@ snapshots:
       '@tabler/icons': 2.43.0
       solid-js: 1.8.7
 
-  '@tabler/icons@2.42.0': {}
-
   '@tabler/icons@2.43.0': {}
+
+  '@tabler/icons@3.19.0': {}
 
   '@testing-library/dom@9.3.3':
     dependencies:
