@@ -7,25 +7,25 @@
     "test:ci": "nx affected -t build --parallel=3"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.2.3",
+    "@eslint/compat": "^1.2.4",
     "@eslint/js": "^9.16.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.17.9",
-    "@vitest/coverage-istanbul": "^2.1.6",
+    "@vitest/coverage-istanbul": "^2.1.8",
     "esbuild-plugin-file-path-extensions": "^2.1.4",
     "eslint": "^9.16.0",
-    "eslint-plugin-react-hooks": "5.1.0-rc-fb9a90fa48-20240614",
+    "eslint-plugin-react-hooks": "5.1.0",
     "jsdom": "^25.0.1",
-    "nx": "20.1.4",
-    "prettier": "^3.4.1",
+    "nx": "20.2.1",
+    "prettier": "^3.4.2",
     "publint": "^0.2.12",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0",
-    "vitest": "^2.1.6"
+    "typescript-eslint": "^8.17.0",
+    "vitest": "^2.1.8"
   },
-  "packageManager": "pnpm@9.14.4",
+  "packageManager": "pnpm@9.15.0",
   "namespace": "@jvllmr",
   "version": "1.0.1"
 }
