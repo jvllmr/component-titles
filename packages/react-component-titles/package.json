@@ -47,8 +47,8 @@
   },
   "devDependencies": {
     "@jvllmr/component-titles-test": "workspace:*",
-    "@testing-library/react": "^16.0.1",
-    "@types/react": ">=18.3.12"
+    "@testing-library/react": "^16.1.0",
+    "@types/react": ">=18.3.14"
   },
   "keywords": [
     "document",
