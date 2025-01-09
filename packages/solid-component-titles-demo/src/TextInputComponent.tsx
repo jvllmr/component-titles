@@ -3,7 +3,8 @@ import { Setter, createSignal, onCleanup } from "solid-js";
 
 function createDebouncedSetter<TValue>(setter: Setter<TValue>, delay: number) {
   let timerHandle: NodeJS.Timeout;
-  // eslint-disable-next-line @typescript-eslint/ban-types
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   function debouncedSignalSetter(value: Exclude<TValue, Function>) {
     clearTimeout(timerHandle);
     timerHandle = setTimeout(() => setter(value), delay);
