@@ -5,4 +5,4 @@ lib
 *.tsbuildinfo
 build
 
-.nx/cache
+.nx
