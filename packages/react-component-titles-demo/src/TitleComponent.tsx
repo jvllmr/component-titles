@@ -8,7 +8,11 @@ export default function TitleComponent(props: {
   active?: boolean;
 }) {
   useComponentTitle(props.active ? props.title : "");
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const notActiveIcon = <IconCircleX color="red" size={50} />;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const activeIcon = <IconCircleCheck color="green" size={50} />;
   const [icon, setIcon] = useState<React.ReactNode>(
     props.active ? activeIcon : notActiveIcon,

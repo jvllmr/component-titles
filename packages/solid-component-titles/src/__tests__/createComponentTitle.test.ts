@@ -1,8 +1,5 @@
 import { createHookTests } from "@jvllmr/component-titles-test";
-import type {
-  TCreateTitleFunction,
-  TTestContextHandler,
-} from "@jvllmr/component-titles-test";
+import type { TCreateTitleFunction } from "@jvllmr/component-titles-test";
 
 import { createRoot, createSignal } from "solid-js";
 import { createComponentTitle } from "../createComponentTitle";

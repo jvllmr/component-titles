@@ -21,8 +21,8 @@ export function useComponentTitle(title: string) {
   const id = useId();
   const mountedTitle = useRef("");
   const titleBeforeMount = useRef("");
-  const behindMe = useRef<IDOMTitleComponentData>();
-  const beforeMe = useRef<IDOMTitleComponentData>();
+  const behindMe = useRef<IDOMTitleComponentData | undefined>(undefined);
+  const beforeMe = useRef<IDOMTitleComponentData | undefined>(undefined);
   const iAmLast = useRef(true);
 
   const handleRegister = useMemo(

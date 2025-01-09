@@ -9,7 +9,7 @@ const preset_options = {
   cjs: true,
   drop_console: true,
 };
-// @ts-expect-error Idk
+
 export default defineConfig(() => {
   const parsed_data = parsePresetOptions(preset_options);
   const tsup_options = generateTsupOptions(parsed_data);

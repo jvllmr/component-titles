@@ -12,5 +12,6 @@
     "**/Thumbs.db": true,
     "**/node_modules": true
   },
-  "cSpell.words": ["jvllmr", "mantine", "uuidv", "Vollmer", "Xicon"]
+  "cSpell.words": ["jvllmr", "mantine", "uuidv", "Vollmer", "Xicon"],
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true
 }
