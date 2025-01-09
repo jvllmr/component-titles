@@ -2,7 +2,7 @@ import { MantineProvider, MantineProviderProps } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/code-highlight/styles.css";
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import DemoApp from "./App";
 import { useColorScheme } from "@mantine/hooks";
 
@@ -19,9 +19,8 @@ function Index() {
   );
 }
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Index />
   </React.StrictMode>,
-  document.getElementById("root"),
 );
