@@ -1,9 +1,5 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-
-  "affected": {
-    "defaultBase": "main"
-  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx-cloud",
@@ -12,6 +8,27 @@
         "parallel": 5,
         "accessToken": "YWRhNTI4ZDMtM2M5Zi00NmYyLWJlODItYjRmMDAwZDE0ZmE5fHJlYWQ="
       }
+    }
+  },
+  "projects": {
+    "@jvllmr/component-titles-core": {},
+    "@jvllmr/react-component-titles": {
+      "implicitDependencies": ["@jvllmr/component-titles-core"]
+    },
+    "@jvllmr/react-component-titles-demo": {
+      "implicitDependencies": [
+        "@jvllmr/react-component-titles",
+        "@jvllmr/component-titles-core"
+      ]
+    },
+    "@jvllmr/solid-component-titles": {
+      "implicitDependencies": ["@jvllmr/component-titles-core"]
+    },
+    "@jvllmr/solid-component-titles-demo": {
+      "implicitDependencies": [
+        "@jvllmr/solid-component-titles",
+        "@jvllmr/component-titles-core"
+      ]
     }
   },
   "defaultBase": "main",
