@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "implicitDependencies": [
+    "@jvllmr/component-titles-core",
+    "@jvllmr/component-titles-test"
+  ]
+}

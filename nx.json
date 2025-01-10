@@ -10,27 +10,6 @@
       }
     }
   },
-  "projects": {
-    "@jvllmr/component-titles-core": {},
-    "@jvllmr/react-component-titles": {
-      "implicitDependencies": ["@jvllmr/component-titles-core"]
-    },
-    "@jvllmr/react-component-titles-demo": {
-      "implicitDependencies": [
-        "@jvllmr/react-component-titles",
-        "@jvllmr/component-titles-core"
-      ]
-    },
-    "@jvllmr/solid-component-titles": {
-      "implicitDependencies": ["@jvllmr/component-titles-core"]
-    },
-    "@jvllmr/solid-component-titles-demo": {
-      "implicitDependencies": [
-        "@jvllmr/solid-component-titles",
-        "@jvllmr/component-titles-core"
-      ]
-    }
-  },
   "defaultBase": "main",
   "nxCloudAccessToken": "YWRhNTI4ZDMtM2M5Zi00NmYyLWJlODItYjRmMDAwZDE0ZmE5fHJlYWQ=",
   "namedInputs": {
