@@ -4,7 +4,7 @@
   "scripts": {
     "test:all": "nx run-many -t test",
     "build:all": "nx run-many -t build",
-    "test:ci": "nx affected -t build --parallel=3"
+    "test:ci": "nx affected -t test --parallel=3"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
