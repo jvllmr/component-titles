@@ -48,7 +48,7 @@
   "devDependencies": {
     "@jvllmr/component-titles-test": "workspace:*",
     "@testing-library/react": "^16.1.0",
-    "@types/react": "^19.0.4"
+    "@types/react": "^19.0.6"
   },
   "keywords": [
     "document",
