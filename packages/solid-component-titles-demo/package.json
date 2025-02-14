@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@jvllmr/solid-component-titles": "workspace:*",
-    "@tabler/icons-solidjs": "^3.28.1",
+    "@tabler/icons-solidjs": "^3.30.0",
     "solid-js": "^1.9.4"
   },
   "devDependencies": {
     "solid-devtools": "^0.33.0",
     "typescript": "^5.7.3",
     "vite": "^6.0.7",
-    "vite-plugin-solid": "^2.11.0"
+    "vite-plugin-solid": "^2.11.1"
   }
 }

@@ -55,7 +55,7 @@
     "@jvllmr/component-titles-test": "workspace:*",
     "@solidjs/testing-library": "^0.8.10",
     "tsup-preset-solid": "^2.2.0",
-    "vite-plugin-solid": "^2.11.0"
+    "vite-plugin-solid": "^2.11.1"
   },
   "keywords": [
     "document",
